@@ -26,7 +26,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand mx-3" href="#">
                     <img src="/multimedia/Sunners logo.png" alt="logo-sunners">
                 </a>
                 <ul class="navbar-nav flex-row align-items-center gap-3">
@@ -56,15 +56,50 @@
             </div>
         </div>
     </section>
+        <!--Intalaciones-->
+        <section id="instalaciones" class="mt-4 mx-5">
+            <div class="conteiner-fluid">
+                <h2 class="text-center">Nuestras Instalaciones</h2>
+                <div class="row d-flex justify-content-center gap-4">
+
+                    <article id="viviendas" class="card p-0 col-12 col-md-3 overflow-hidden"> <!--overflow-hidden de bootstrap hace que se esconda el overflow que temga la tarjeta y asi ajusta la imagen a los bordes redondeados-->
+                        <div class="card-image ratio ratio-16x9"> <!--ratio mantiene toda la imagen responsive sin deformarse con proporcion indicada bootstrap-->
+                            <img class="object-fit-cover" src="/multimedia/paneles-vivienda.jpg" alt="instalacion-vivienda-unifamiliar"> <!--object-fit-cover es para que cubra el espacio y se adapte la foto y no se achate-->
+                        </div>
+                        <div class="card-body p-3">
+                            <h3 class="card-title">Viviendas</h3>
+                            <p class="card-text">Instalaciones fotovoltáicas para <span>parcelas</span> y <span>viviendas unifamiliares</span> haciendo que saquen partido de la energía que brinda el sol  </p>
+                        </div>
+                    </article>
+
+                    <article id="industriales" class="card p-0 col-12 col-md-3 overflow-hidden">
+                        <div class="ratio ratio-16x9"><!--ratio mantiene toda la imagen responsive sin deformarse bootstrap-->
+                            <img class="object-fit-cover" src="/multimedia/paneles-industrial.jpg" alt="intalacion-industrial"> 
+                        </div>
+                        <div class="card-body p-3">
+                            <h3 class="card-title">Industriales</h3>
+                            <p class="card-text">Instalaciones fotovoltáicas para <span>naves industriales</span> y <span>grandes superficies</span> a las que se le quiere sacar una rentabilidad energética gracias al sol</p>
+                        </div>
+                    </article>
+
+                    <article id="cargadores" class="card p-0 col-12 col-md-3 overflow-hidden">
+                        <div class="ratio ratio-16x9"> <!--ratio mantiene toda la imagen responsive sin deformarse bootstrap-->
+                            <img class="object-fit-cover" src="" alt="intalacion-cargador">
+                        </div>
+                        
+                        <div class="card-body p-3">
+                            <h3 class="card-title">Cargadores Eléctricos</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
         <!--About-->
         <section id="about">
             
         </section>
-        <!--Intalaciones-->
-        <section id="instalaciones">
-            
-        </section>
-
     </main>
     <!--FOOTER-->
     <footer>
