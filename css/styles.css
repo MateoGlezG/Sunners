@@ -100,3 +100,10 @@ li a:hover{
 .card:hover img{
     opacity: 0.8;
 }
+
+/*Seccion About us*/
+ul{
+    list-style: none;
+    list-style-image: url(/multimedia/Sunners\ logo\ simple\ small.png);
+    list-style-position: outside;
+}
