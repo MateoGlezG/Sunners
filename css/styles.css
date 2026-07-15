@@ -126,6 +126,11 @@ li a:hover{
     background-position: left 2px;
 }
 
+/*Certificaciones*/
+.img-certificado{
+    max-width: 120px;
+}
+
 
 /*FOOTER*/
 footer{
