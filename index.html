@@ -37,6 +37,9 @@
                         <a href="#instalaciones">Nuestras Instalaciones</a>
                     </li>
                     <li class="nav-item">
+                        <a href="">Comercializadora</a>
+                    </li>
+                    <li class="nav-item">
                         <button class="contactButton p-1">Contáctanos</button>
                     </li>
                 </ul>
@@ -47,7 +50,7 @@
     <main>
         <!--Portada-->
     <section id="inicio">
-        <div class="portada">
+        <div class="portada mx-4 mx-lg-0">
             <div>
                 <h1>Ingeniería del <span>Sol</span></h1>
                 <h2>para tu hogar y tu empresa</h2>
@@ -97,17 +100,17 @@
             </div>
         </section>
         <!--About-->
-        <section id="about" class="mt-5">
-            <div class="container-fluid">
+        <section id="about" class="mt-5 mx-sm-5 mx-2">
+            <div class="container-fluid pt-5 px-5 ">
                 <h2 class="text-center">¿Quiénes somos en Sunners?</h2>
                 <div class="d-flex flex-column justify-content-center">
                     <article>
-                       <p>Nuestra empresa nace en el centro de la necesaria Transición Energética tratando de aprovechar el recurso energético más constante, predecible y democrático que existe, el sol.</p> 
+                       <p>Nuestra empresa nace en el centro de la necesaria Transición Energética tratando de aprovechar el recurso energético más constante, predecible y democrático que existe, el <span>sol</span>.</p> 
                        <p>Siendo conscientes de la gran dependencia de la energía eléctrica de nuestra sociedad y de su incremento con los retos futuros (descarbonización, menor dependencia del gas, coche eléctrico, etc…) proponemos como parte de la solución, el empleo de la capacidad fotovoltaica que cada uno tengamos, distribuyendo así la generación de energía.</p>
                     </article>
-                    <article>
+                    <article class="d-flex flex-column justify-content-center align-items-center mt-3">
                         <p>En <span>Sunners</span> estamos <span>especializados</span> en: </p>
-                        <ul>
+                        <ul class="especialidades">
                             <li>Asesoramiento energético personalizado</li>
                             <li>Proyecto: estudio de consumos y diseño de la instalación fotovoltaica</li>
                             <li>Suministro, instalación y puesta en servicio</li>
@@ -116,13 +119,42 @@
                         </ul>
                     </article>
                 </div>
+                <picture class="mb-5">
+                    <!-- Imagen para pantallas grandes se aplica a partir de md-->
+                    <source media="(min-width: 768px)" srcset="/multimedia/instalacion.png" > <!--boostrap md:768px-->
 
+                    <!-- Imagen por defecto para móvil -->
+                    <img src="/multimedia/instalacion_mini.png" alt="Descripción de la imagen" class="img-fluid">
+                </picture>
             </div>
+            
         </section>
+        
     </main>
     <!--FOOTER-->
     <footer>
+        <div class="container-fluid footer-div">
+            <section class="d-flex flex-column justify-content-center align-items-center mx-4">
+                <h4>Contacto</h4>
+                <h5>Sunners Ingeniería del Sol, SL</h5>
+                <div class="div-contact">
+                    <img alt="mail-contact" src="/multimedia/icon-mail.png">
+                   <h5><a href="mailto:contacto@sunners.es">contacto@sunners.es</a></h5>
+                </div>
+                <div class="div-contact">
+                    <img alt="tlf-contact" src="/multimedia/icon-tlf.png">
+                    <h5><a href="tel:0034699619957">+34 699 619 957</a></h5>
+                </div>
+                <h6>Av. Palemeras 16, Nave D7</h6>
+                <h6>28350 Ciempozuelos (Madrid)</h6>
+            </section>
 
+            <section class="avisos mt-5 d-flex justify-content-center align-items-center gap-4">
+                <a href="">Aviso Legal</a>
+                <a href="">Política de Privacidad</a>
+                <a href="">Política de Cookies</a>
+            </section>
+        </div>
     </footer>
 </body>
 </html>
