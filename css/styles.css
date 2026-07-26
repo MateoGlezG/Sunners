@@ -165,3 +165,35 @@ footer a{
 .avisos a:hover{
     color: var(--color-light);
 }
+
+/*modal de contacto */
+#modal-contacto{
+    border: 0;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+    background-color: #BB361520;
+}
+
+#modal-contacto .modal-body{
+    padding: 0;
+    border:solid 3px var(--color-sunners);
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+iframe{
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+/*modal de instalaciones*/
+#modal-instalaciones{
+    background-color: #BB361520; /*para que el fondo se vea un poco naranja en el modal*/
+}
+
+#modal-instalaciones .modal-content{
+    height: 80vh;
+}

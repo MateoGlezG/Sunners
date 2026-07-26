@@ -41,7 +41,7 @@
                         <a href="">Comercializadora</a>
                     </li>
                     <li class="nav-item">
-                        <button class="contactButton p-1">Contáctanos</button>
+                        <button class="contactButton p-1" data-bs-toggle="modal" data-bs-target="#modal-contacto">Contáctanos</button>
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                 <h1>Ingeniería del <span>Sol</span></h1>
                 <h2>para tu hogar y tu empresa</h2>
                 <p>Estudio de consumos, diseño personalizado y ejecución llave en mano de instalaciones solares fotovoltaicas. Legalización y gestión de subvenciones.</p>
-                <button class="contactButton p-3">Comienza tu estudio</button>
+                <button class="contactButton p-3" data-bs-toggle="modal" data-bs-target="#modal-contacto">Comienza tu estudio</button>
             </div>
         </div>
     </section>
@@ -157,13 +157,6 @@
                 <h6>28350 Ciempozuelos (Madrid)</h6>
             </section>
 
-            <section>
-                <ul class="bi social-links">
-                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
-                    <li><a href=""><i class="bi bi-linkdIn"></i></a></li>
-                </ul>
-            </section>
-
             <section class="avisos mt-5 d-flex justify-content-center align-items-center gap-4">
                 <a href="">Aviso Legal</a>
                 <a href="">Política de Privacidad</a>
@@ -171,5 +164,31 @@
             </section>
         </div>
     </footer>
+
+    <!--modal formulario-->
+    <div id="modal-contacto" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe src="https://solstice-dandelion-c9b.notion.site/ebd//39ff05814f9d80cd8c91dde2cbe80091" width="100%" height="600" frameborder="0" allow="geolocation" allowfullscreen ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal de las instalaciones-->
+            <div id="modal-instalaciones" class="modal fade modal-xl">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="titulo-instalaciones" class="modal-title">Instalaciones</h3>
+                        </div>
+                        <div class="modal-body">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 </body>
 </html>
