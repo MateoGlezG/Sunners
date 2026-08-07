@@ -22,19 +22,31 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
     $("#viviendas").click(function(){
         abrirModalInstalaciones();
         $("#titulo-instalaciones").text("Instalaciones Residenciales");
+        $("#modal-residenciales").removeClass("d-none");
+
+        $("#modal-cargadores").addClass("d-none");
+        $("#modal-industriales").addClass("d-none");
     });
 
     $("#industriales").on("click",function(){
         abrirModalInstalaciones();
         $("#titulo-instalaciones").text("Intalaciones Industriales");
+        $("#modal-industriales").removeClass("d-none");
+
+        $("#modal-residenciales").addClass("d-none");
+        $("#modal-cargadores").addClass("d-none");
     });
 
     $("#cargadores").on("click",function(){
         abrirModalInstalaciones();
         $("#titulo-instalaciones").text("Cargadores Eléctricos");
+        $("#modal-cargadores").removeClass("d-none");
+
+        $("#modal-residenciales").addClass("d-none");
+        $("#modal-industriales").addClass("d-none");
     });
 
 
 
-});
+}); //fin de la carga del document
 

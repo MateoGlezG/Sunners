@@ -197,3 +197,12 @@ iframe{
 #modal-instalaciones .modal-content{
     height: 80vh;
 }
+
+.galeria{
+   
+}
+
+.galeria img{
+    width: 30vh;
+    object-fit: cover;
+}
