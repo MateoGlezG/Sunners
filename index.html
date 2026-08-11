@@ -55,7 +55,7 @@
             <div>
                 <h1>Ingeniería del <span>Sol</span></h1>
                 <h2>para tu hogar y tu empresa</h2>
-                <p>Estudio de consumos, diseño personalizado y ejecución llave en mano de instalaciones solares fotovoltaicas. Legalización y gestión de subvenciones.</p>
+                <p>Estudio de consumos, diseño personalizado y ejecución de instalaciones solares fotovoltaicas. Legalización y gestión de subvenciones.</p>
                 <button class="contactButton p-3" data-bs-toggle="modal" data-bs-target="#modal-contacto">Comienza tu estudio</button>
             </div>
         </div>
@@ -177,57 +177,118 @@
     </div>
 
     <!--modal de las instalaciones-->
-            <div id="modal-instalaciones" class="modal fade modal-xl">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 id="titulo-instalaciones" class="modal-title">Instalaciones</h3>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center">
-                            <!--residenciales-->
-                            <section id="modal-residenciales" class="d-none">
-                                <div class="d-flex">
-                                    <article class="galeria col-6"><!--galería de imagenes de instalaciones-->
-                                        <img alt="" src="/multimedia/cards/res-1.jpeg">
-                                        <img alt="" src="/multimedia/cards/res-2.jpeg">
-                                        <img alt="" src="/multimedia/cards/res-3.jpg">
-                                        <img alt="" src="/multimedia/cards/res-4.jpg">
-                                    </article>
-                                    <article class="col-6">
-                                        <p>aqui va el texto</p>
-                                    </article>
-                                </div>
-                            </section>
-                            <!--industriales-->
-                            <section id="modal-industriales" class="d-none">
-                                <div class="d-flex">
-                                    <article class="galeria col-6"><!--galería de imagenes de instalaciones-->
-                                        <img alt="" src="/multimedia/cards/ind-1.jpeg">
-                                        <img alt="" src="/multimedia/cards/ind-2.jpeg">
-                                        <img alt="" src="multimedia/cards/ind-3.jpeg">
-                                        <img alt="" src="multimedia/cards/ind-4.jpeg">
-                                        <img alt="" src="multimedia/cards/ind-5.jpeg">
-                                    </article>
-                                    <article class="col-6">
-                                        <p>aqui va el texto</p>
-                                    </article>
-                                </div>
-                            </section>
-                            <!--cargadores-->
-                            <section id="modal-cargadores" class="d-none">
-                                <div class="d-flex">
-                                    <article class="galeria col-6"><!--galería de imagenes de instalaciones-->
-                                        <img alt="" src="/multimedia/cards/car-1.jpeg">
-                                    </article>
-                                    <article class="col-6">
-                                        <p>aqui va el texto</p>
-                                    </article>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+    <div id="modal-instalaciones" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="titulo-instalaciones" class="modal-title"></h3>
                 </div>
-            </div>
+                <div class="modal-body">
+                    <!--residenciales-->
+                    <section id="modal-residenciales" class="d-none">
+                    <div class="row">
+                        <article id="carouselResidencial" class="carousel slide carousel-fade col-12 col-lg-7 mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/multimedia/cards/res-1.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/res-2.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                        <img src="/multimedia/cards/res-3.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/res-4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselResidencial" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselResidencial" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </article>
+                        <article class="col-12 col-lg-5">
+                            <p>Diseñamos <span>instalciones fotovoltaicas</span>  adaptadas a las necesidades de cada vivienda, buscando <span>maximizar el autoconsumo</span>, <span>reducir la factura eléctrica</span>  y <span>aumentar la independencia energética</span>.</p>
+                            <p>Cada proyecto se dimensiona de forma personalizada teniendo en cuenta los consumos, las características de la cubierta y las necesidades futuras del cliente.</p>
+                            <p>Cuidamos cada detalle de la instalación para conseguir una solución <span>eficiente</span>, <span>segura</span> y <span>bien integrada</span> en la vivienda, acompañando al cliente durante todo el proceso, desde el <span>estudio inicial</span> hasta la <span>puesta en marcha</span>, <span>legalización</span> y posteriormente hasta el <span>mantenimiento</span>.</p>
+                        </article>
+                    </div>
+                    </section>
+                    <!--industriales-->
+                    <section id="modal-industriales" class="d-none">
+                    <div class="row">
+                        <article id="carouselIndustrial" class="carousel slide carousel-fade col-12 col-lg-7 mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/multimedia/cards/ind-1.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/ind-2.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/ind-3.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/ind-4.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/ind-5.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndustrial" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>                                            
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndustrial" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </article>
+                        <article class="col-12 col-lg-5">
+                            <p>Desarrollamos <span>soluciones fotovoltaicas</span> para empresas, naves industriales y sector terciario, adaptadas a sus perfiles de consumo y actividad.</p>
+                            <p>Nuestro objetivo es aprovechar al máximo la energía solar disponible para <span>reducir</span> los costes energéticos, <span>mejorar</span> la competitividad y <span>avanzar</span> hacia un modelo energético <span>más sostenible</span></p>
+                            <p>Estudiamos cada proyecto de forma individual para <span>optimizar la producción</span> y el <span>retorno de la inversión</span>, ofreciendo instalaciones <span>fiables</span> y <span>preparadas</span> para responder a las necesidades energéticas presentes y futuras de cada empresa.</p>
+                        </article>
+                    </div>
+                    </section>
+                    <!--cargadores-->
+                    <section id="modal-cargadores" class="d-none">
+                    <div class="row">
+                        <article id="carouselCargadores" class="carousel slide carousel-fade col-12 col-lg-7 mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/multimedia/cards/car-1.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/multimedia/cards/car-2.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                     <img src="/multimedia/cards/car-3.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCargadores" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCargadores" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </article>
+                        <article class="col-12 col-lg-5">
+                            <p>Instalamos <span>puntos de recarga</span> para vehículos eléctricos en viviendas, empresas, comunidades de propietarios y aparcamientos, adaptando cada solución a las características de la instalación eléctrica y a las necesidades de cada usuario.</p>
+                            <p>Diseñamos sistemas de recarga <span>seguros</span>, <span>eficientes</span> y <span>preparados</span> para el futuro, con posibilidad de <span>integrarlos con instalaciones fotovoltaicas</span>  para aprovechar la energía solar y reducir aún más el coste de cada carga.</p>
+                        </article>
+                    </div>
+                    </section>
+                </div>
+            </div><!--modal content-->
+        </div>
+    </div><!--modal instalaciones-->
 
 </body>
 </html>
