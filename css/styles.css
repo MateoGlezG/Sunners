@@ -172,6 +172,7 @@ footer a{
 
 .avisos a{
     text-decoration: none;
+    text-align: center;
     color: var(--color-dark);
 }
 
