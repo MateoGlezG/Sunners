@@ -1,3 +1,9 @@
+:root{
+    --color-sunners: #BB3615;
+    --color-dark: #252627;
+    --color-light: #fff;
+    --nav-size:10vh;
+}
 /*MAIN*/
 /*Portada*/
 #inicio-energia{
@@ -11,3 +17,23 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*modal contacto*/
+#modal-energia{
+    border: 0;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+    background-color: #BB361520;
+}
+
+#modal-energia .modal-body{
+    text-align: center;
+}
+
+h3 a{
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--color-sunners);
+}
+
