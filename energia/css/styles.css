@@ -1,0 +1,13 @@
+/*MAIN*/
+/*Portada*/
+#inicio-energia{
+    padding-top: var(--nav-size);
+    min-height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-image:linear-gradient(#00000015, #00000010, #0000, var(--color-light)),url(/energia/multimedia/urba-fotovoltaica.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
