@@ -31,14 +31,26 @@
                 <a class="navbar-brand mx-3" href="#">
                     <img src="../multimedia/Sunners logo.png" alt="logo-sunners">
                 </a>
-                <ul class="navbar-nav flex-row align-items-center gap-3">
-                    <li class="nav-item">
-                        <a href="../index.html">Fotovoltaica</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="contactButton p-1" data-bs-toggle="modal" data-bs-target="#modal-energia">Contáctanos</button>
-                    </li>
-                </ul>
+                <button class="navbar-toggler menu-hamburguesa" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar el menú">
+                    <span class="linea-hamburguesa"></span>
+                    <span class="linea-hamburguesa"></span>
+                    <span class="linea-hamburguesa"></span>
+                </button>
+                <div id="menuPrincipal" class="collapse navbar-collapse">
+                    <ul class="navbar-nav flex-lg-row align-items-lg-center gap-3 align-items-end ms-auto">
+                        <li class="nav-item">
+                            <a href="/index.html">Fotovoltaica</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="contactButton p-1" data-bs-toggle="modal" data-bs-target="#modal-energia">Contáctanos</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>

@@ -12,6 +12,16 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
     });
 
+    $(window).on("scroll",function(){ //tambien sirve para cerrarlo si se clica dentro porque se mueve la pantalla
+        const dispMovil = window.innerWidth < 992; //devuelve true si se cumple
+        const menuOpen = $("#menuPrincipal").hasClass("show");
+
+        if(dispMovil && menuOpen){
+            $("#menuPrincipal").collapse("hide");
+        }
+
+    });
+
     //funcion parar el modal de instlaciones
     function abrirModalInstalaciones(){
        const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById("modal-instalaciones"));

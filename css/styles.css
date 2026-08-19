@@ -57,6 +57,65 @@ li a:hover{
     transition: background-color 0.4s ease-in-out;
 }
 
+/*nav bar dispositivos moviles*/
+/* Botón de la hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+
+    background-color: transparent;
+    border: 2px solid var(--color-sunners);
+    border-radius: 8px;
+
+    gap: 4px;
+}
+
+/* Eliminar el contorno predeterminado de Bootstrap */
+.menu-hamburguesa:focus {
+    box-shadow: none;
+}
+
+/* Líneas de la hamburguesa */
+.linea-hamburguesa {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+
+    background-color: var(--color-sunners);
+    border-radius: 20px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.2s ease,
+        background-color 0.3s ease;
+}
+.menu-hamburguesa:hover {
+    background-color: var(--color-sunners);
+}
+
+.menu-hamburguesa:hover .linea-hamburguesa {
+    background-color: var(--color-light);
+}
+
+/*efceto transformar cruz*/
+.menu-hamburguesa[aria-expanded="true"] .linea-hamburguesa:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-hamburguesa[aria-expanded="true"] .linea-hamburguesa:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguesa[aria-expanded="true"] .linea-hamburguesa:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 /*MAIN*/
 /*Portada*/
 #inicio{
