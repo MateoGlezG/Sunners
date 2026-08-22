@@ -56,7 +56,13 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
         $("#modal-industriales").addClass("d-none");
     });
 
+    //cargar formulario de Notion
+    $(".contactButton").on("click", function () {
+    iframe=$("iframe");
 
-
+    if (!iframe.attr("src")) {
+        iframe.attr("src", iframe.data("src")); //cambia el data-src por src para cargar el form de notion solo cuando se toque el boton
+    }
+    });
 }); //fin de la carga del document
 
