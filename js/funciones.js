@@ -13,7 +13,7 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
     });
 
     $(window).on("scroll",function(){ //tambien sirve para cerrarlo si se clica dentro porque se mueve la pantalla
-        const dispMovil = window.innerWidth < 992; //devuelve true si se cumple
+        const dispMovil = window.innerWidth < 992; //devuelve true si se cumple, 992px es lg cuando aparece el menu pequeño 
         const menuOpen = $("#menuPrincipal").hasClass("show");
 
         if(dispMovil && menuOpen){
@@ -116,8 +116,8 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
     //para que vayan cambiando automaticamente
     setInterval(function(){
-        $(".review-next").click(); //hago click cada 5 segundo a la fecha derecha automaticamente
-    }, 5000);
+        $(".review-next").click(); //hago click cada 8 segundo a la fecha derecha automaticamente
+    }, 8000);
 
 }); //fin de la carga del document
 
