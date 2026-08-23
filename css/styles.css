@@ -301,7 +301,7 @@ iframe{
 .review{
     border: 1.5px solid var(--color-sunners);
     flex: 0 0 calc((100% - 2rem) / 3);/*para caluclar que solo aparezcan 3*/
-    max-height: 40vh;
+    height: 35vh;
     overflow: scroll;
     scrollbar-width: none;
 }
@@ -316,3 +316,10 @@ iframe{
     }
 }
 
+.flecha-review{
+    color: var(--color-sunners);
+    background-color: var(--color-light);
+    border: 1.6px solid var(--color-sunners);
+    border-radius: 20px;
+    margin: 1%;
+}

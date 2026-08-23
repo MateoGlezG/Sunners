@@ -116,8 +116,8 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
     //para que vayan cambiando automaticamente
     setInterval(function(){
-        $(".review-next").click(); //hago click cada 4 segundo a la fecha derecha automaticamente
-    }, 4000);
+        $(".review-next").click(); //hago click cada 5 segundo a la fecha derecha automaticamente
+    }, 5000);
 
 }); //fin de la carga del document
 
