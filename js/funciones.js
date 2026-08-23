@@ -64,5 +64,60 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
         iframe.attr("src", iframe.data("src")); //cambia el data-src por src para cargar el form de notion solo cuando se toque el boton
     }
     });
+
+    //slider de reseñas 
+    let reviewContainer = $(".review-container");
+
+    function getPasoReview(){ //calcula el salto para que aparezca la siguiente review
+        const tamañoReview = reviewContainer.children(".review").first().outerWidth();
+        const gap = parseFloat(
+            reviewContainer.css("gap")
+        ) || 0;
+
+        return tamañoReview + gap;
+    }
+
+    //flecha next
+    $(".review-next").on("click", function(){
+        salto = getPasoReview();
+
+        reviewContainer.css({ //hago el salto con el css del container
+            "transition": "transform 0.4s ease-in-out",
+            "transform": `translateX(-${salto}px)`
+        });
+
+        setTimeout(function(){
+            reviewContainer.children(".review").first().appendTo(reviewContainer);
+            reviewContainer.css({
+                "transition": "none",
+                "transform": "translateX(0)"
+            });
+            reviewContainer[0].offsetHeight;
+        },400); //la animacion dura 0.4s-400ms
+    });
+
+    //fecla prev
+    $(".review-prev").on("click", function(){
+        salto = getPasoReview();
+    //al ir hacia atrás lo hago al revés y no tengo que esperar a la animacion 
+        reviewContainer.children(".review").last().prependTo(reviewContainer);
+        reviewContainer.css({
+            "transition": "none",
+            "transform": `translateX(-${salto}px)`
+        });
+        reviewContainer[0].offsetHeight;
+
+
+        reviewContainer.css({ //hago el salto con el css del container
+            "transition": "transform 0.4s ease-in-out",
+            "transform": `translateX(0)`
+        });
+    });
+
+    //para que vayan cambiando automaticamente
+    setInterval(function(){
+        $(".review-next").click(); //hago click cada 4 segundo a la fecha derecha automaticamente
+    }, 4000);
+
 }); //fin de la carga del document
 

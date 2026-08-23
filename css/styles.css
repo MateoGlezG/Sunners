@@ -171,13 +171,13 @@ li a:hover{
     color: var(--color-dark);
 }
 
-.card:hover{
+#instalaciones .card:hover{
     transform: scale(0.95);
     background-color: #BB361530; /*pongo el color d fondo de la tarjeta al seleccionarse algo tranparente*/
     cursor: pointer;
 }
 
-.card:hover img{
+#instalaciones .card:hover img{
     opacity: 0.8;
 }
 
@@ -278,3 +278,41 @@ iframe{
    overflow-y: auto;
    scrollbar-width: none;
 }
+
+/*reseñas*/
+.review-slider{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    width: 100%;
+}
+
+.vista-review{
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-container{
+   width: 100%;
+   flex-wrap: nowrap;
+   transition: transform 0.4s ease; 
+}
+
+.review{
+    border: 1.5px solid var(--color-sunners);
+    flex: 0 0 calc((100% - 2rem) / 3);/*para caluclar que solo aparezcan 3*/
+    max-height: 40vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+@media (max-width: 992px) { /*calculo para tablet md*/
+    .review{
+        flex: 0 0 calc((100% - 1rem) / 2); /*salen 2*/
+    }
+}
+@media (max-width: 768px) { /*calculo para movil sm*/
+    .review{
+        flex: 0 0 100%; /*sale solo 1*/
+    }
+}
+
