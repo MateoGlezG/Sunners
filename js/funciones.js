@@ -56,15 +56,6 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
         $("#modal-industriales").addClass("d-none");
     });
 
-    //cargar formulario de Notion
-    $(".contactButton").on("click", function () {
-    const iframe=$("iframe");
-
-    if (!iframe.attr("src")) {
-        iframe.attr("src", iframe.data("src")); //cambia el data-src por src para cargar el form de notion solo cuando se toque el boton
-    }
-    });
-
     //slider de reseñas 
     let reviewContainer = $(".review-container");
 
@@ -118,6 +109,66 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
     setInterval(function(){
         $(".review-next").click(); //hago click cada 8 segundo a la fecha derecha automaticamente
     }, 8000);
+
+
+    //envio a Notion
+    function postFormulario(){
+        let datosCliente = {
+            nombre: $("#name").val().trim(),
+            direccion: $("#direccion").val().trim(),
+            telefono: $("#telefono").val(),
+            email: $("#email"),
+            tipo: $("#tipo-proyecto").val()
+        };
+        let consumo = $("#consumo")[0].files[0];
+
+        let datosForm = new FormData();
+       
+        datosForm.append(
+            "datosCliente",
+            JSON.stringify(datosCliente)
+        );
+        if(consumo){
+            datosForm.append(
+                "consumo",
+                consumo
+            );   
+        };
+
+        let url ="https://hook.eu1.make.com/1bx1u2jzabnn2c5snna4yyctued6cs1m" ; //url de webhook
+        let parametroAjax = { //parametros para el envio ajax
+            url : url,
+            method: "POST",
+            data: datosForm,
+            processData: false,
+            contentType: false,
+        };
+
+       //POST al servidor (el servidor por webhook)
+         $.ajax(parametroAjax)
+        .done(function(){
+            console.log("Se han enviado los datos");
+            panelContacto();
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.error('Error al enviar los datos');
+            console.error(textStatus, errorThrown);
+        });
+    }; //fin funcion envio datos
+
+    $("#form-contacto").on("submit", function(event){
+        event.preventDefault();
+
+        postFormulario();
+    });
+
+    function panelContacto(){
+        $("#form-contacto").addClass("d-none");
+        $("#titulo-contacto").addClass("d-none");
+        $("#btn-contacto").addClass("d-none");
+
+        $("#confirmacion-contacto").removeClass("d-none");
+    };
 
 }); //fin de la carga del document
 
