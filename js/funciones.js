@@ -117,7 +117,7 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
             nombre: $("#name").val().trim(),
             direccion: $("#direccion").val().trim(),
             telefono: $("#telefono").val(),
-            email: $("#email"),
+            email: $("#email").val().trim(),
             tipo: $("#tipo-proyecto").val()
         };
         let consumo = $("#consumo")[0].files[0];
@@ -134,6 +134,13 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
                 consumo
             );   
         };
+
+        $("#btn-contacto")
+        .prop("disabled", true)
+        .html(`
+            <span class="spinner-border spinner-border-sm me-2"></span>
+            Enviando datos...
+        `);
 
         let url ="https://hook.eu1.make.com/1bx1u2jzabnn2c5snna4yyctued6cs1m" ; //url de webhook
         let parametroAjax = { //parametros para el envio ajax
@@ -169,6 +176,7 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
         $("#confirmacion-contacto").removeClass("d-none");
     };
+
 
 }); //fin de la carga del document
 
