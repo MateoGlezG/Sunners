@@ -137,6 +137,7 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
         $("#btn-contacto")
         .prop("disabled", true)
+        .addClass("btn-enviando")
         .html(`
             <span class="spinner-border spinner-border-sm me-2"></span>
             Enviando datos...
@@ -160,6 +161,11 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.error('Error al enviar los datos');
             console.error(textStatus, errorThrown);
+
+            if(jqXHR.status == 500){
+                panelError();
+            }
+
         });
     }; //fin funcion envio datos
 
@@ -176,6 +182,14 @@ $(document).ready(function(){ //espero a que se cargue el documento entero
 
         $("#confirmacion-contacto").removeClass("d-none");
     };
+
+    function panelError(){
+       $("#form-contacto").addClass("d-none");
+        $("#titulo-contacto").addClass("d-none");
+        $("#btn-contacto").addClass("d-none");
+
+        $("#panel-error").removeClass("d-none"); 
+    }
 
 
 }); //fin de la carga del document

@@ -283,12 +283,18 @@ footer a{
     color: var(--color-light);
     background-color: var(--color-sunners);
     border-radius: 5px;
-    max-width: 20vh;
+    max-width: 25vh;
 }
 #modal-contacto .modal-body button:hover{
     background-color: var(--color-dark);
     color: var(--color-light);
     transition: background-color 0.4s ease-in;
+}
+
+.btn-enviando{
+    background-color: var(--color-dark);
+    color: var(--color-sunners);
+    max-width: 30vh;
 }
 
 #form-contacto label{
@@ -357,7 +363,7 @@ footer a{
 }
 
 #modal-instalaciones .modal-content{
-   max-height: 80vh;
+   max-height: 70vh;
    overflow: hidden;
    overflow-y: auto;
    scrollbar-width: none;
